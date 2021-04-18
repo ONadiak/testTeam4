@@ -9,6 +9,7 @@ public class WebDriverSettings {
 
 
 
+
     @BeforeSuite
     public void setUp() {
         DriverRepository.downloadWebDriver();

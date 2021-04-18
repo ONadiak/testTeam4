@@ -1,13 +1,13 @@
 package com.automationPractice.steps;
 
-import com.automationPractice.PageObjects.MainPage;
+import com.automationPractice.PageObjects.HeaderPage;
 
 public class MainPageBL {
 
-    private MainPage mainPage;
+    private HeaderPage mainPage;
 
     public MainPageBL( ) {
-        mainPage = new MainPage();
+        mainPage = new HeaderPage();
     }
 
     public MainPageBL clickOnMyAccountButton(){

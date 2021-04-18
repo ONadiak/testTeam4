@@ -1,6 +1,5 @@
 package com.automationPractice;
 
-
 import com.automationPractice.Navigation.Navigation;
 import com.automationPractice.steps.RegistrationPageBL;
 import com.automationPractice.steps.StepsPage;

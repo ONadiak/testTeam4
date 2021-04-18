@@ -1,10 +1,7 @@
 package com.automationPractice.repository;
 
 import com.automationPractice.Data.RegisterModel;
-import net.bytebuddy.utility.RandomString;
 import org.apache.commons.lang3.RandomStringUtils;
-
-import java.util.Random;
 
 public class RegisterModelRepository {
 
