@@ -4,18 +4,18 @@ import com.automationPractice.PageObjects.HeaderPage;
 
 public class HeaderPageBL {
 
-    private HeaderPage mainPage;
+    private HeaderPage headerPage;
 
     public HeaderPageBL( ) {
-        mainPage = new HeaderPage();
+        headerPage = new HeaderPage();
     }
 
     public HeaderPageBL clickOnMyAccountButton(){
-        mainPage.getMyAccountButton().click();
+        headerPage.getMyAccountButton().click();
         return this;
     }
     public RegistrationPageBL clickOnRegisterButton(){
-        mainPage.getRegistrationButton().click();
+        headerPage.getRegistrationButton().click();
         return new RegistrationPageBL();
     }
 
