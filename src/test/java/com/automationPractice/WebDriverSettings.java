@@ -1,26 +1,26 @@
 package com.automationPractice;
 
-import org.junit.After;
-import org.junit.Before;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.automationPractice.driver.DriverRepository;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 public class WebDriverSettings {
 
-    public ChromeDriver driver;
 
-    @Before
+
+    @BeforeSuite
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-
-        driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        DriverRepository.downloadWebDriver();
     }
 
+    @BeforeClass
+    public void createDriver (){
+        DriverRepository.instanceWebBrowser();
+    }
 
-    @After
-    public void close(){
-        driver.quit();
-
+    @AfterSuite
+    public void closeBrowser(){
+        DriverRepository.closeBrowser();
     }
 }

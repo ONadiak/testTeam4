@@ -1,18 +1,10 @@
 package com.automationPractice.PageObjects;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class RegistrationPage {
+public class RegistrationPage extends BasePage {
 
-    WebDriver driver;
-    WebDriverWait wait;
-    public RegistrationPage (WebDriver driver){
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10);
-    }
 
     @FindBy(id = "input-firstname")
     private WebElement firstNameForReg;
@@ -28,17 +20,41 @@ public class RegistrationPage {
     private WebElement passwordConfirmForReg;
     @FindBy(xpath = "//input[@type='checkbox']")
     private WebElement checkBox;
+    @FindBy(xpath = "//input[@type = 'submit']")
+    private WebElement submitButton;
 
-    public void registration () {
-        firstNameForReg.sendKeys("Ost");
-        lastNameForReg.sendKeys("Nad");
-        emailForReg.sendKeys("nad@gmail.com");
-        telephoneForReg.sendKeys("32874554");
-        passwordForReg.sendKeys("password");
-        passwordConfirmForReg.sendKeys("password");
-        checkBox.click();
-
+    public WebElement getFirstNameForReg() {
+        return firstNameForReg;
     }
+
+    public WebElement getLastNameForReg() {
+        return lastNameForReg;
+    }
+
+    public WebElement getEmailForReg() {
+        return emailForReg;
+    }
+
+    public WebElement getTelephoneForReg() {
+        return telephoneForReg;
+    }
+
+    public WebElement getPasswordForReg() {
+        return passwordForReg;
+    }
+
+    public WebElement getPasswordConfirmForReg() {
+        return passwordConfirmForReg;
+    }
+
+    public WebElement getCheckBox() {
+        return checkBox;
+    }
+
+    public WebElement getSubmitButton() {
+        return submitButton;
+    }
+
 
 
 }
