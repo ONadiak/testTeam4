@@ -1,6 +1,6 @@
 package com.opencart.steps;
 
-import com.opencart.Data.SearchData;
+import com.opencart.Data.DataForTests;
 import com.opencart.PageObjects.BasePage;
 import com.opencart.PageObjects.MainPage;
 import com.opencart.PageObjects.SearchPage;
@@ -8,12 +8,10 @@ import com.opencart.PageObjects.SearchPage;
 public class MainPageBL extends BasePage {
 
    private MainPage mainPage;
-   private SearchData searchData;
-   private SearchPage searchPage;
+   private DataForTests dataForTests;
    public MainPageBL(){
        mainPage = new MainPage();
-       searchData = new SearchData();
-       searchPage = new SearchPage();
+       dataForTests = new DataForTests();
 
    }
 

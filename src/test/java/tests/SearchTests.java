@@ -1,10 +1,8 @@
 package tests;
 
-import com.opencart.Data.SearchData;
+import com.opencart.Data.DataForTests;
 import com.opencart.Navigation.Navigation;
-import com.opencart.PageObjects.SearchPage;
 import com.opencart.steps.SearchPageBL;
-import com.opencart.steps.StepsPage;
 import org.testng.annotations.Test;
 
 import static com.opencart.enums.URLs.BASE_URL;
@@ -15,7 +13,7 @@ public class SearchTests extends WebDriverSettings{
     public void checkCorrectProductSearch()  {
         new Navigation().navigateToURL(BASE_URL.getValue());
         SearchPageBL searchPageBL = stepsPage.getMainPageBL()
-                .enterDataIntoSearchField(searchData.getSamsung())
+                .enterDataIntoSearchField(DataForTests.validDataForSearchTests)
                 .checkSuccessSearch();
     }
 
@@ -23,7 +21,7 @@ public class SearchTests extends WebDriverSettings{
     public void checkWrongProductNameSearch(){
        new Navigation().navigateToURL(BASE_URL.getValue());
         SearchPageBL searchPageBL = stepsPage.getMainPageBL()
-                .enterDataIntoSearchField(searchData.getSamsng())
+                .enterDataIntoSearchField(DataForTests.invalidDataForSearchTests)
                 .checkFailSearch();
 
     }
@@ -33,7 +31,7 @@ public class SearchTests extends WebDriverSettings{
         new Navigation().navigateToURL(BASE_URL.getValue());
         SearchPageBL searchPageBL = stepsPage.getMainPageBL()
                 .clickOnSearchButton()
-                .chooseCategoryToSearchAndEnterProductToSearch(searchData.getSamsung(),true)
+                .chooseDekstopCategoryAndEnterProductToSearch(DataForTests.validDataForSearchTests)
                 .checkSuccessSearch();
     }
     @Test
@@ -41,7 +39,7 @@ public class SearchTests extends WebDriverSettings{
         new Navigation().navigateToURL(BASE_URL.getValue());
         SearchPageBL searchPageBL = stepsPage.getMainPageBL()
                 .clickOnSearchButton()
-                .chooseCategoryToSearchAndEnterProductToSearch(searchData.getSamsung(),false)
+                .chooseLaptopsAndNotebooksCategoryAndEnterProductToSearch(DataForTests.validDataForSearchTests)
                 .checkFailSearch();
     }
     @Test
@@ -49,7 +47,7 @@ public class SearchTests extends WebDriverSettings{
         new Navigation().navigateToURL(BASE_URL.getValue());
         SearchPageBL searchPageBL = stepsPage.getMainPageBL()
                 .clickOnSearchButton()
-                .chooseCategoryToSearchAndEnterProductToSearch(searchData.getSamsng(), true)
+                .chooseDekstopCategoryAndEnterProductToSearch(DataForTests.invalidDataForSearchTests)
                 .checkFailSearch();
 
     }
@@ -58,7 +56,7 @@ public class SearchTests extends WebDriverSettings{
         new Navigation().navigateToURL(BASE_URL.getValue());
         SearchPageBL searchPageBL = stepsPage.getMainPageBL()
                 .clickOnSearchButton()
-                .chooseCategoryToSearchAndEnterProductToSearch(searchData.getSamsng(), false)
+                .chooseLaptopsAndNotebooksCategoryAndEnterProductToSearch(DataForTests.invalidDataForSearchTests)
                 .checkFailSearch();
 
     }

@@ -12,11 +12,6 @@ public class DriverUtils {
         driver = DriverRepository.DRIVERS.get();
 
     }
-    public void clickOnElements(WebElement webElement){
-
-        getJSExecutor().executeScript("arguments[0].click;",webElement);
-    }
-
     private JavascriptExecutor getJSExecutor(){
         return (JavascriptExecutor) driver;
     }
