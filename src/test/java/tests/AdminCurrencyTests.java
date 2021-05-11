@@ -12,7 +12,7 @@ import static com.opencart.enums.URLs.CURRENCY_URL;
 public class AdminCurrencyTests extends WebDriverSettings{
 
     @Test
-    public void loginAdmin(){
+    public void addNewCurrency(){
         new Navigation().navigateToURL(ADMIN_URL.getValue());
         AdminLoginPageBL steps = new AdminLoginPageBL();
         AdminCurrenciesPageBL adminCurrenciesPageBL = steps.loginAdmin()
