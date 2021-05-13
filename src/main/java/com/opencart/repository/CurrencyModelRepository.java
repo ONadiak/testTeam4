@@ -11,7 +11,7 @@ public class CurrencyModelRepository {
     public CurrencyModel getCurrencyModel() {
         return CurrencyModel.getAdminBuilder()
                 .currencyTitle(RandomStringUtils.randomAlphabetic(6))
-                .currencyCode(RandomStringUtils.randomAscii(3))
+                .currencyCode(RandomStringUtils.randomAlphabetic(3))
                 .currencySymbolLeft(RandomStringUtils.randomAscii(1))
                 .currencySymbolRight(RandomStringUtils.randomAscii(1))
                 .currencyValue(RandomStringUtils.randomNumeric(1))

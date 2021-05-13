@@ -1,10 +1,6 @@
 package com.opencart.steps;
 
-import com.opencart.PageObjects.AdminCurrenciesPage;
 import com.opencart.PageObjects.AdminNavigationPage;
-import com.opencart.PageObjects.HeaderPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdminNavigationPageBL {
     private AdminNavigationPageBL adminNavigationPageBL;
@@ -24,7 +20,6 @@ public class AdminNavigationPageBL {
     }
 
     public AdminNavigationPageBL clickOnSystemButton(){
-
         adminNavigationPage.getSystemButton().click();
         return this;
     }
@@ -37,6 +32,16 @@ public class AdminNavigationPageBL {
     public AdminCurrenciesPageBL clickOnCurrenciesSettingsButton(){
         adminNavigationPage.getCurrenciesSettingsButton().click();
         return new AdminCurrenciesPageBL();
+    }
+
+    public AdminNavigationPageBL clickOnTaxesButton(){
+        adminNavigationPage.getTaxesButton().click();
+        return this;
+    }
+
+    public AdminTaxRatesPageBL clickOnTaxRatesButton(){
+        adminNavigationPage.getTaxRatesButton().click();
+        return new AdminTaxRatesPageBL();
     }
 
     public AdminLoginPageBL getAdminLoginPageBL() {

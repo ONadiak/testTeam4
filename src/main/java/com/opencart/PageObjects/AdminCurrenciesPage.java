@@ -1,5 +1,6 @@
 package com.opencart.PageObjects;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -12,6 +13,10 @@ public class AdminCurrenciesPage extends BasePage{
 
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     private WebElement successAddingCurrencyText;
+
+    @FindBy(xpath = ".//tbody/tr[position() = 1]/td[position() = 1]")
+    private WebElement firstCurrency;
+
 
     public AdminCurrenciesPage() {
     }
@@ -26,5 +31,9 @@ public class AdminCurrenciesPage extends BasePage{
 
     public WebElement getSuccessAddingCurrencyText() {
         return successAddingCurrencyText;
+    }
+
+    public WebElement getFirstCurrency() {
+        return firstCurrency;
     }
 }

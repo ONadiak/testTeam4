@@ -28,6 +28,7 @@ public class AdminAddCurrencyPage extends BasePage{
     private WebElement saveCurrencyButton;
 
 
+
     private Select currencyStatusSelector = new Select(driver.findElement(By.id("input-status")));
 
     public WebElement getCurrencyTitleInput() {
