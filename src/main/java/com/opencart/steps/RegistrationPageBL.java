@@ -13,7 +13,7 @@ import org.testng.Assert;
 public class RegistrationPageBL extends BasePage {
 
     private RegistrationPage registrationPage;
-    private SuccessRegistrationPage succesRegistrationPage;
+    private SuccessRegistrationPage successRegistrationPage;
 
     public RegistrationPageBL() {
        registrationPage = new RegistrationPage();
@@ -32,7 +32,7 @@ public class RegistrationPageBL extends BasePage {
         clickOnSubmitButton();
 
 
-        succesRegistrationPage = new SuccessRegistrationPage();
+        successRegistrationPage = new SuccessRegistrationPage();
         return this;
     }
 
@@ -69,13 +69,16 @@ public class RegistrationPageBL extends BasePage {
        registrationPage.getCheckBox().click();
     }
 
+
     public void clickOnSubmitButton(){
         registrationPage.getSubmitButton().click();
     }
 
     public void checkSuccessRegistration(){
+        wait.until(ExpectedConditions.visibilityOf(successRegistrationPage.getSuccessRegistration()));
         String expectedMessage = "Your Account Has Been Created!";
-        Assert.assertEquals(succesRegistrationPage.getSuccessRegistration().getText(),expectedMessage, "Incorrect page title");
+        Assert.assertEquals(successRegistrationPage.getSuccessRegistration().getText(),expectedMessage, "Incorrect page title");
     }
 
 }
+

@@ -13,7 +13,6 @@ public class MainPage extends BasePage {
     private WebElement searchButton;
 
 
-
     public WebElement getSearchField() {
         return searchField;
     }
@@ -21,4 +20,6 @@ public class MainPage extends BasePage {
     public WebElement getSearchButton() {
         return searchButton;
     }
+
 }
+
