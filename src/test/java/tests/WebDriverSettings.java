@@ -1,3 +1,4 @@
+
 package tests;
 
 import com.opencart.driver.DriverRepository;
@@ -13,7 +14,6 @@ public class WebDriverSettings {
     @BeforeSuite
     public void setUp() {
         DriverRepository.downloadWebDriver();
-
     }
 
     @BeforeClass
@@ -21,8 +21,9 @@ public class WebDriverSettings {
         DriverRepository.instanceWebBrowser();
     }
 
-//    @AfterSuite
-//    public void closeBrowser(){
-//        DriverRepository.closeBrowser();
-//    }
+    @AfterSuite
+    public void closeBrowser(){
+        DriverRepository.closeBrowser();
+    }
 }
+

@@ -1,3 +1,4 @@
+
 package com.opencart.Data;
 
 import lombok.Getter;
@@ -46,3 +47,4 @@ public class RegisterModel {
 
     }
 }
+

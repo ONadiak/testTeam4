@@ -1,3 +1,4 @@
+
 package com.opencart.enums;
 
 public enum URLs {
@@ -17,3 +18,4 @@ public enum URLs {
         return value;
     }
 }
+
