@@ -1,3 +1,4 @@
+
 package com.opencart.steps;
 
 import com.opencart.Data.RegisterModel;
@@ -80,3 +81,4 @@ public class RegistrationPageBL extends BasePage {
     }
 
 }
+

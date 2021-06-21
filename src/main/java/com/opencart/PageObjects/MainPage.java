@@ -12,6 +12,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//button[@class= 'btn btn-default btn-lg']")
     private WebElement searchButton;
 
+
     public WebElement getSearchField() {
         return searchField;
     }
@@ -19,4 +20,6 @@ public class MainPage extends BasePage {
     public WebElement getSearchButton() {
         return searchButton;
     }
+
 }
+
