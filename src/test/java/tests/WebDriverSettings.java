@@ -1,3 +1,4 @@
+
 package tests;
 
 import com.opencart.driver.DriverRepository;
@@ -25,3 +26,4 @@ public class WebDriverSettings {
         DriverRepository.closeBrowser();
     }
 }
+

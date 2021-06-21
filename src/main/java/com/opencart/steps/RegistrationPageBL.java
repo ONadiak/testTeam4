@@ -1,3 +1,4 @@
+
 package com.opencart.steps;
 
 import com.opencart.Data.RegisterModel;
@@ -40,43 +41,39 @@ public class RegistrationPageBL extends BasePage {
     private void inputFirstName(String firstName){
         registrationPage.getFirstNameForReg().clear();
         registrationPage.getFirstNameForReg().sendKeys(firstName);
-
-
     }
+
     private void inputLastName(String lastName){
         registrationPage.getLastNameForReg().clear();
         registrationPage.getLastNameForReg().sendKeys(lastName);
-
     }
+
     private void inputEmail(String email){
         registrationPage.getEmailForReg().clear();
         registrationPage.getEmailForReg().sendKeys(email);
-
     }
+
     private void inputTelephone(String telephone){
         registrationPage.getTelephoneForReg().clear();
         registrationPage.getTelephoneForReg().sendKeys(telephone);
-
     }
+
     private void inputPassword(String password){
         registrationPage.getPasswordForReg().clear();
         registrationPage.getPasswordForReg().sendKeys(password);
         registrationPage.getPasswordConfirmForReg().clear();
         registrationPage.getPasswordConfirmForReg().sendKeys(password);
-
     }
+
     private void clickPolicyBox() {
        registrationPage.getCheckBox().click();
-
     }
 
     public void clickOnSubmitButton(){
         registrationPage.getSubmitButton().click();
-
     }
 
     public void checkSuccessRegistration(){
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h1[text() = 'Your Account Has Been Created!']")));
         String expectedMessage = "Your Account Has Been Created!";
         Assert.assertEquals(succesRegistrationPage.getSuccessRegistration().getText(),expectedMessage, "Incorrect page title");
     }

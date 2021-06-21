@@ -1,3 +1,4 @@
+
 package com.opencart.Data;
 
 import lombok.Getter;
@@ -6,17 +7,19 @@ import lombok.Getter;
 public class RegisterModel {
 
     private String firstName;
-    private String lastName ;
-    private String email ;
-    private String telephone ;
-    private String password ;
+    private String lastName;
+    private String email;
+    private String telephone;
+    private String password;
 
     RegisterModel(){
 
     }
+
     public static RegisterModel.Builder getBuilder(){
         return new RegisterModel().new Builder();
     }
+
     public class Builder{
         public RegisterModel.Builder firstName(String value) {
             firstName = value;
@@ -44,3 +47,4 @@ public class RegisterModel {
 
     }
 }
+

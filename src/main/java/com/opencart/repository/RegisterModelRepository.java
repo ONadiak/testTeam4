@@ -1,3 +1,4 @@
+
 package com.opencart.repository;
 
 import com.opencart.Data.RegisterModel;
@@ -18,3 +19,4 @@ public class RegisterModelRepository {
                 .build();
     }
 }
+

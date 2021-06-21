@@ -1,7 +1,9 @@
+
 package com.opencart.PageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SuccessRegistrationPage extends BasePage{
 
@@ -9,6 +11,7 @@ public class SuccessRegistrationPage extends BasePage{
     private WebElement successRegistration;
 
     public WebElement getSuccessRegistration() {
+        wait.until(ExpectedConditions.visibilityOf(successRegistration));
         return successRegistration;
     }
 }

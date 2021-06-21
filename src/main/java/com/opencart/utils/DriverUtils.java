@@ -1,3 +1,4 @@
+
 package com.opencart.utils;
 
 import com.opencart.driver.DriverRepository;
@@ -10,10 +11,9 @@ public class DriverUtils {
 
     public DriverUtils() {
         driver = DriverRepository.DRIVERS.get();
-
     }
-    public void clickOnElements(WebElement webElement){
 
+    public void clickOnElements(WebElement webElement){
         getJSExecutor().executeScript("arguments[0].click;",webElement);
     }
 

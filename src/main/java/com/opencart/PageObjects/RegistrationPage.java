@@ -1,3 +1,4 @@
+
 package com.opencart.PageObjects;
 
 import org.openqa.selenium.WebElement;
@@ -8,18 +9,25 @@ public class RegistrationPage extends BasePage {
 
     @FindBy(id = "input-firstname")
     private WebElement firstNameForReg;
+
     @FindBy(id = "input-lastname")
     private WebElement lastNameForReg;
+
     @FindBy(id = "input-email")
     private WebElement emailForReg;
+
     @FindBy(id = "input-telephone")
     private WebElement telephoneForReg;
+
     @FindBy(id = "input-password")
     private WebElement passwordForReg;
+
     @FindBy(id = "input-confirm")
     private WebElement passwordConfirmForReg;
+
     @FindBy(xpath = "//input[@type='checkbox']")
     private WebElement checkBox;
+
     @FindBy(xpath = "//input[@type = 'submit']")
     private WebElement submitButton;
 

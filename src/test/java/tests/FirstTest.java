@@ -1,6 +1,8 @@
+
 package tests;
 
 import com.opencart.Navigation.Navigation;
+import com.opencart.steps.HeaderPageBL;
 import com.opencart.steps.RegistrationPageBL;
 import com.opencart.steps.MainPageBL;
 import org.testng.annotations.Test;
@@ -19,11 +21,12 @@ public class FirstTest extends WebDriverSettings {
                 .clickOnRegisterButton()
                 .registerNewPerson();
         registrationPageBL.checkSuccessRegistration();
-
-
-
     }
 
 
 
+
+
+
 }
+
